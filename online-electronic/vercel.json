@@ -1,0 +1,25 @@
+{
+
+    "builds": [{
+
+        "src": "online-electronic/wsgi.py",
+
+        "use": "@vercel/python",
+
+        "config": { "maxLambdaSize": "750mb", "runtime": "python3.10" }
+
+    }],
+
+    "routes": [
+
+        {
+
+            "src": "/(.*)",
+
+            "dest": "online-electronic/wsgi.py"
+
+        }
+
+    ]
+
+}
